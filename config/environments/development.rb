@@ -61,7 +61,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   #デフォルトURLの指定
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
   # Cloud9への接続を許可する
   config.hosts.clear

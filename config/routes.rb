@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#index'
   get 'pages/show'
-  get 'posts/new'
-  post '/posts'=> "posts#create"
+  resources :posts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

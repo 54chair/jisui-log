@@ -1,9 +1,10 @@
-<h1>新規投稿</h1>
+<%= form_with(model: @post, local: true) do |f| %>
 
-<%= form_with model: @post, url: '/posts', local:true do |f| %>
-<p>料理名</p>
+<%= f.label :title, "料理名" %>
 <%= f.text_field :title %>
-<p>感想</p>
+
+<%= f.label :content, "感想" %>
 <%= f.text_area :content %>
-<%= f.submit '投稿' %>
+
+<%= f.submit "投稿" %>
 <% end %>

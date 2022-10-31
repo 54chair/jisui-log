@@ -5,6 +5,9 @@
 
   <%= f.label :content, "感想" %>
   <%= f.text_area :content %>
+  
+  <%= f.label :image, "料理の画像" %>
+  <%= f.file_field :image %>
 
   <%= f.submit "投稿" %>
 <% end %>

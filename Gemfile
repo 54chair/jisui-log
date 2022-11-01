@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.7'
 # Deviseの追加
 gem 'devise'
 
+# Active Storageバリデーション用のgem
+gem 'active_storage_validations'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

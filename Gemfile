@@ -33,6 +33,7 @@ gem 'devise'
 # Active Storageバリデーション用のgem
 gem 'active_storage_validations'
 
+# ファイルの加工処理用のgem
 gem 'image_processing'
 gem 'mini_magick'
 

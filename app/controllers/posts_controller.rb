@@ -22,6 +22,15 @@ class PostsController < ApplicationController
     end
   end
   
+  def destroy
+    @post = Post.find_by(id: params[:id])
+    if @post.destroy
+      redirect_to "/posts/index"
+    else
+      render 'posts/#{@post}.id'
+    end
+  end
+  
   private
     def post_params
       params.require(:post).permit(:title, :content, :image)

@@ -33,6 +33,9 @@ gem 'devise'
 # Active Storageバリデーション用のgem
 gem 'active_storage_validations'
 
+gem 'image_processing'
+gem 'mini_magick'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

@@ -2,5 +2,6 @@
 <%= @post.title %>
 <%= @post.content %>
 <%= image_tag @post.display_image if @post.image.attached? %>
-<%= link_to("編集", "/posts/#{@post.id}/edit") %>
-<%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+<%= link_to "編集", "/posts/#{@post.id}/edit" %>
+<%= link_to "削除", "/posts/#{@post.id}/destroy", {method: "post"} %>
+<%= link_to "戻る", "/posts/index" %>

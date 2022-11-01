@@ -1,6 +1,5 @@
 <% @posts.each do |post| %>
   <%= post.user.username %>
   <%= post.title %>
-  <%= post.content %>
   <%= image_tag post.display_image if post.image.attached? %>
 <% end %>

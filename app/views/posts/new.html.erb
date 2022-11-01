@@ -1,4 +1,4 @@
-<%= form_with(model: @post, local: true) do |f| %>
+<%= form_with(model: @post, url:"/posts", local: true) do |f| %>
 
   <%= f.label :title, "料理名" %>
   <%= f.text_field :title %>

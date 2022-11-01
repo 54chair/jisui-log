@@ -7,7 +7,7 @@
   <%= f.text_area :content %>
   
   <%= f.label :image, "料理の画像" %>
-  <%= f.file_field :image %>
+  <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
 
   <%= f.submit "投稿" %>
 <% end %>

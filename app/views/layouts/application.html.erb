@@ -17,6 +17,7 @@
             <%= link_to 'プロフィール変更', edit_user_registration_path %>
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
             <%= link_to '新規投稿', "/posts/new" %>
+            <%= link_to '投稿一覧', "/posts/index" %>
           <% else %>
             <%= link_to 'サインアップ', new_user_registration_path %>
             <%= link_to 'ログイン', new_user_session_path %>

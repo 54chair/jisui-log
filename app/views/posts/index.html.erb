@@ -1,5 +1,7 @@
 <% @posts.each do |post| %>
+  <%= link_to "/posts/#{post.id}" do %>
+    <%= image_tag post.display_image if post.image.attached? %>
+  <% end %>
   <%= post.user.username %>
   <%= post.title %>
-  <%= image_tag post.display_image if post.image.attached? %>
 <% end %>

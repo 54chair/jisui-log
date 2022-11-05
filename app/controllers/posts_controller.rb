@@ -17,9 +17,9 @@ class PostsController < ApplicationController
     @post.image.attach(params[:post][:image])
     if @post.save
       flash[:success] = "新規投稿に成功しました。"
-      redirect_to "/posts/index"
+      redirect_to posts_path
     else
-      render 'posts/new'
+      render new_post_path
     end
   end
   
@@ -31,9 +31,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:success] = "投稿の編集に成功しました。"
-      redirect_to "/posts/index"
+      redirect_to post_path
     else
-      render 'posts/edit'
+      render edit_post_path
     end
   end
   
@@ -41,9 +41,9 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     if @post.destroy
       flash[:success] = "投稿の削除に成功しました。"
-      redirect_to "/posts/index"
+      redirect_to posts_path
     else
-      render 'posts/#{@post}.id'
+      render post_path
     end
   end
   

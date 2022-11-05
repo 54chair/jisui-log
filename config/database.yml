@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: 54chair #usernameをb0edefa19ae476から54chairに変更
-  password: Takukoshi3618 #passwordを1f960b79からTakukoshi3618に変更
+  username: <%= ENV['DATABASE_DEFAULT_USER'] %>
+  password: <%= ENV['DATABASE_DEFAULT_PASSWORD'] %>
   socket: /var/run/mysqld/mysqld.sock
 
 development:

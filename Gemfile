@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+#Railsで環境変数を利用するgemの追加
+gem 'dotenv-rails'
+
 # Deviseの追加
 gem 'devise'
 

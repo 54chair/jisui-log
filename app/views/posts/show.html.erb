@@ -1,5 +1,5 @@
 <%= image_tag @post.display_image if @post.image.attached? %>
-<%= @post.user.username %>
+<%= link_to @post.user.username, user_path(@post.user_id) %>
 <%= @post.title %>
 <%= @post.content %>
 <% if @post.user == current_user %>

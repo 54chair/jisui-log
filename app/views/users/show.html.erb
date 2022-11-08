@@ -2,3 +2,6 @@
 <% @posts.each do |post| %>
   <%= image_tag post.display_image if post.image.attached? %>
 <% end %>
+<% if @user == current_user %>
+  <%= link_to 'プロフィール変更', edit_user_registration_path %>
+<% end %>

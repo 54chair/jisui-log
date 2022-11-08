@@ -1,11 +1,15 @@
 <%= @user.username %>
+
+<%= render 'shared/stats' %>
+
+<% if @user == current_user %>
+  <%= link_to 'プロフィール変更', edit_user_registration_path %>
+<% end %>
+
 <% @posts.each do |post| %>
   <%= image_tag post.display_image if post.image.attached? %>
   <%= post.user.username %>
   <%= post.title %>
   <%= link_to '詳細', post_path(post) %>
-<% end %>
-<% if @user == current_user %>
-  <%= link_to 'プロフィール変更', edit_user_registration_path %>
 <% end %>
 <%= link_to "戻る", users_path %>

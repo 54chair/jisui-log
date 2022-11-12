@@ -2,5 +2,7 @@
   <%= image_tag post.display_image if post.image.attached? %>
   <%= post.user.username %>
   <%= post.title %>
+  <i class="fa-solid fa-heart like-btn"></i>
+  <%= post.likes.count %>
   <%= link_to '詳細', post_path(post) %>
 <% end %>

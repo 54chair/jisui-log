@@ -2,6 +2,7 @@
 <%= link_to @post.user.username, user_path(@post.user_id) %>
 <%= @post.title %>
 <%= @post.content %>
+
 <% if @post.user == current_user %>
   <%= link_to "編集", edit_post_path %>
   <%= link_to "削除", post_path , {method: "delete"} %>

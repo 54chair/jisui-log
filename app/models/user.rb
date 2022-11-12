@@ -28,9 +28,4 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
-  
-  #いいねしていたらtrueを返す
-  def liked_by?(post_id)
-    likes.where(post_id: post_id).exists?
-  end
 end

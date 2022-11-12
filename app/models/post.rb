@@ -15,4 +15,9 @@ class Post < ApplicationRecord
   def display_image
     image.variant(resize_to_limit: [500, 200])
   end
+  
+  #いいねしていたらtrueを返す
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
 end

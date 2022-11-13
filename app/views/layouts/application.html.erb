@@ -13,7 +13,8 @@
     <header>
       <nav>
           <% if user_signed_in? %>
-            <strong><%= link_to current_user.username, pages_show_path %></strong>
+            <%= link_to 'ホーム', pages_show_path %>
+            <%= link_to 'プロフィール', user_path(current_user)%>
             <%= link_to '新規投稿', new_post_path %>
             <%= link_to '投稿一覧', posts_path %>
             <%= link_to 'ユーザー一覧', users_path %>

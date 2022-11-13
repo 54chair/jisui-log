@@ -3,6 +3,8 @@
 <%= render 'shared/stats' %>
 <%= render 'follow_form'%>
 
+<%= link_to 'このユーザーがいいねした投稿を見る', likes_user_path(@user) %>
+
 <% if @user == current_user %>
   <%= link_to 'プロフィール変更', edit_user_registration_path %>
 <% end %>

@@ -11,7 +11,6 @@ class LikesController < ApplicationController
       redirect_to post_path(params[:post_id]) 
     else
       flash[:danger] = "「いいね！」に失敗しました。"
-      redirect_to post_path(params[:post_id])
     end
   end
   

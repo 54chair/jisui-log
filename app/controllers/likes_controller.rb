@@ -17,10 +17,12 @@ class LikesController < ApplicationController
   
   def destroy
     @like = Like.find_by(user_id: current_user.id, post_id: params[:post_id])
-    if @like.destroy
+    if @like
+      @like.destroy
       redirect_to post_path(params[:post_id])
     else
       flash[:danger] = "「いいね！」の削除に失敗しました。"
+      redirect_back fallback_location: @like
     end
   end
 end

@@ -3,9 +3,9 @@
   <%= post.user.username %>
   <%= post.title %>
   <% if post.liked_by?(current_user) %>
-    <i class="fa-solid fa-heart like-btn"></i>
+    <i class="fas fa-heart like-btn"></i>
   <% else %>
-    <i class="fa-regular fa-heart unlike-btn"></i>
+    <i class="far fa-heart unlike-btn"></i>
   <% end %>
   <%= post.likes.count %>
   <%= link_to '詳細', post_path(post) %>

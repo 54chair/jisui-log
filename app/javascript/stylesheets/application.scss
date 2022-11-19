@@ -1,6 +1,16 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 
+/* トップページ */
+.about {
+  padding: 250px 0px;
+}
+
+.about-item {
+  text-align: center;
+}
+
+/* いいね機能 */
 .like-link {
   text-decoration: none;
 }

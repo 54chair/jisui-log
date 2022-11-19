@@ -1,6 +1,11 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 
+/* 全体 */
+body {
+  background-color: #FCF4E3;
+}
+
 /* トップページ */
 .about {
   padding: 250px 0px;

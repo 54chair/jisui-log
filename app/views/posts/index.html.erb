@@ -1,26 +1,24 @@
-<div class="container-lg">
-  <section class="post-index">
-    <div class="post-index-item">
-      <h2>投稿一覧</h2>
-    </div>
-    <div class="row">
-      <% @posts.each do |post| %>
-      <div class="col-md-4 col-lg-3">
-        <div class="card">
-          <%= image_tag post.display_image ,class: "post-index-img" %>
-          <div class="card-body text-center">
-            <h4 class="card-title"><%= post.title %></h4>
-            <%= link_to '詳細', post_path(post), class: "btn btn-warning" %>
-            <% if post.liked_by?(current_user) %>
-              <i class="fas fa-heart like-btn"></i>
-            <% else %>
-              <i class="far fa-heart unlike-btn"></i>
-            <% end %>
-            <%= post.likes.count %>
-          </div>.
-        </div>
+<section class="post-index">
+  <div class="post-index-item">
+    <h2>投稿一覧</h2>
+  </div>
+  <div class="row">
+    <% @posts.each do |post| %>
+    <div class="col-md-4 col-lg-3">
+      <div class="card">
+        <%= image_tag post.display_image, class: "post-index-img" %>
+        <div class="card-body text-center">
+          <h4 class="card-title"><%= post.title %></h4>
+          <%= link_to '詳細', post_path(post), class: "btn btn-warning" %>
+          <% if post.liked_by?(current_user) %>
+            <i class="fas fa-heart like-btn"></i>
+          <% else %>
+            <i class="far fa-heart unlike-btn"></i>
+          <% end %>
+          <%= post.likes.count %>
+        </div>.
       </div>
-      <% end %>
     </div>
-  </section>
-</div>
+    <% end %>
+  </div>
+</section>

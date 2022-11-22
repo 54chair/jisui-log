@@ -28,7 +28,7 @@
         <% @posts.each do |post| %>
           <div class="col-md-6 col-lg-4">
             <div class="card">
-              <%= image_tag post.display_image, class: "post-index-img" %>
+              <%= image_tag post.display_image, class: "post-user-index-img" %>
               <div class="card-body text-center">
                 <h4 class="card-title"><%= post.title %></h4>
                 <%= link_to '詳細', post_path(post), class: "btn btn-warning" %>

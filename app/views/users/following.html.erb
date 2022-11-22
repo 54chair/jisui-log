@@ -1,0 +1,18 @@
+<section class="users-following-list">
+  <div class="user-following-list-item">
+    <h2>フォロー一覧</h2>
+  </div>
+  <div class="user-following-list-group">
+    <div class="row d-flex justify-content-center">
+      <div class ="col-md-6">
+        <ul class="list-group">
+          <% @users.each do |user| %>
+            <li class="list-group-item">
+              <%= link_to user.username, user_path(user) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

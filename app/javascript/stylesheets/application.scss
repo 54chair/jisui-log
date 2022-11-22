@@ -32,7 +32,6 @@ footer {
   margin: 0;
 }
 
-/* いいね機能 */
 .like-link {
   text-decoration: none;
 }
@@ -88,12 +87,22 @@ p {
   object-fit: cover;
 }
 
-/**/
+/* 新規投稿 */
 .post-new {
   padding-bottom: 50px;
 }
 
 .post-new-item {
+  padding: 50px 0px;
+  text-align: center;
+}
+
+/* ユーザー一覧 */
+.user-list {
+  padding-bottom: 50px;
+}
+
+.user-list-item {
   padding: 50px 0px;
   text-align: center;
 }

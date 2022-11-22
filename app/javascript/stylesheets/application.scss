@@ -32,6 +32,8 @@ footer {
   margin: 0;
 }
 
+/* いいねの色 */
+
 .like-link {
   text-decoration: none;
 }
@@ -115,4 +117,20 @@ p {
 .user-list-item {
   padding: 50px 0px;
   text-align: center;
+}
+
+/* ユーザーがいいねした投稿一覧 */
+.post-likes-index {
+  padding-bottom: 50px;
+}
+
+.post-likes-index-item {
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.post-likes-index-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }

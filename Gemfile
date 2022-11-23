@@ -33,6 +33,10 @@ gem 'dotenv-rails'
 # Deviseの追加
 gem 'devise'
 
+# Deviseを日本語化する
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
+
 # Active Storageバリデーション用のgem
 gem 'active_storage_validations'
 

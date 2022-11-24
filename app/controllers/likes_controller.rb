@@ -10,7 +10,7 @@ class LikesController < ApplicationController
     if @like.save
       redirect_to post_path(params[:post_id]) 
     else
-      flash[:danger] = "「いいね！」に失敗しました。"
+      flash[:alert] = "「いいね！」に失敗しました。"
       redirect_back fallback_location: @like
     end
   end
@@ -21,7 +21,7 @@ class LikesController < ApplicationController
       @like.destroy
       redirect_to post_path(params[:post_id])
     else
-      flash[:danger] = "「いいね！」の削除に失敗しました。"
+      flash[:alert] = "「いいね！」の削除に失敗しました。"
       redirect_back fallback_location: @like
     end
   end

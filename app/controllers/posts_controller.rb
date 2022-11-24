@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     @post.image.attach(params[:post][:image])
     if @post.save
-      flash[:success] = "新規投稿に成功しました。"
+      flash[:notice] = "新規投稿に成功しました。"
       redirect_to posts_path
     else
       render new_post_path
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      flash[:success] = "投稿の編集に成功しました。"
+      flash[:notice] = "投稿の編集に成功しました。"
       redirect_to post_path
     else
       render edit_post_path

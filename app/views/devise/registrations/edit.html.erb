@@ -8,6 +8,10 @@
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
           <div class="mb-3">
+            <%= f.label :avatar, { class: "form-label"} %><br />
+            <%= f.file_field :avatar, { class: "form-control"} %>
+          </div>
+          <div class="mb-3">
             <%= f.label :email, { class: "form-label"} %><br />
             <%= f.email_field :email, { class: "form-control", placeholder: "Eメール"} %>
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

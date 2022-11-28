@@ -4,6 +4,11 @@
   </div>
   <div class="row">
     <div class="col-lg-3 profile-content">
+      <div>
+        <% if @user.avatar.attached? %>
+          <%= image_tag @user.avatar.variant(gravity: :center, resize:"200x200^", crop:"200x200+0+0").processed, {class: "avatar"} %>
+        <% end %>
+      </div>
       <div class="user-name">
         <h4><%= @user.username %></h4>
       </div>

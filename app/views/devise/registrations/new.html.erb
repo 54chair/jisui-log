@@ -31,7 +31,7 @@
             <%= f.password_field :password_confirmation, { class: "form-control", placeholder: "パスワード確認用"}  %>
           </div>
           <div class="mb-3">
-            <%= f.submit t('.sign_up') %>
+            <%= f.submit t('.sign_up'), class: "btn btn-warning" %>
           </div>
         <% end %>
         <%= link_to 'ログインはこちらから', new_user_session_path %>

@@ -9,7 +9,7 @@
           <%= render "devise/shared/error_messages", resource: resource %>
           <div class="mb-3">
             <%= f.label :avatar, { class: "form-label"} %><br />
-            <%= f.file_field :avatar, { class: "form-control"} %>
+            <%= f.file_field :avatar, accept: "image/jpeg,image/gif,image/png", class: "form-control" %>
           </div>
           <div class="mb-3">
             <%= f.label :email, { class: "form-label"} %><br />

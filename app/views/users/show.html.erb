@@ -3,31 +3,35 @@
     <h2>プロフィール</h2>
   </div>
   <div class="row">
-    <div class="col-lg-3 profile-content">
-      <div>
-        <% if @user.avatar.attached? %>
-          <%= image_tag @user.avatar.variant(gravity: :center, resize:"200x200^", crop:"200x200+0+0").processed, {class: "avatar"} %>
-        <% else %>
-          <%= image_tag("default_user.jpg", size: "200x200", class: "avatar") %>
-        <% end %>
-      </div>
-      <div class="user-name">
-        <h4><%= @user.username %></h4>
-      </div>
-      <div class="follow-form">
-        <%= render 'follow_form'%>
-      </div>
-      <div class="stats">
-        <%= render 'shared/stats' %>
-      </div>
-      <div>
-        <%= link_to 'このユーザーがいいねした投稿を見る', likes_user_path(@user) %>
-      </div>
-      <% if @user == current_user %>
-        <div>
-          <%= link_to 'プロフィールを変更する', edit_user_registration_path %>
+    <div class="col-lg-3">
+      <div class="profile-content-wrapper">
+        <div class="profile-content">
+          <div>
+            <% if @user.avatar.attached? %>
+              <%= image_tag @user.avatar.variant(gravity: :center, resize:"200x200^", crop:"200x200+0+0").processed, {class: "avatar"} %>
+            <% else %>
+              <%= image_tag("default_user.jpg", size: "200x200", class: "avatar") %>
+            <% end %>
+          </div>
+          <div class="user-name">
+            <h4><%= @user.username %></h4>
+          </div>
+          <div class="follow-form">
+            <%= render 'follow_form'%>
+          </div>
+          <div class="stats">
+            <%= render 'shared/stats' %>
+          </div>
+          <div>
+            <%= link_to 'ユーザーがいいねした投稿を見る', likes_user_path(@user) %>
+          </div>
+          <% if @user == current_user %>
+            <div>
+              <%= link_to 'プロフィールを変更する', edit_user_registration_path %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
     <div class="col-lg-9">
       <div class ="row">

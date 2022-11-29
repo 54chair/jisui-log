@@ -146,8 +146,13 @@ p {
   text-align: center;
 }
 
+.profile-content-wrapper{
+  margin-bottom: 50px;
+}
+
 .profile-content {
-  margin-bottom: 20px;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 .post-user-index-img {

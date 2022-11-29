@@ -70,6 +70,20 @@ p {
   font-size: 20px;
 }
 
+/* トップページ */
+.home-button-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.home-button {
+  display: flex;
+  flex-flow: column;
+}
+.home-button a {
+  margin-top: 10px;
+}
+
 /* サインアップ */
 .user-sign-up {
   padding-bottom: 50px;

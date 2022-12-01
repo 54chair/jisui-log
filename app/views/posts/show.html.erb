@@ -6,7 +6,9 @@
   <div class="row d-flex justify-content-center">
    <div class="col-md-4">
     <div class="card">
-     <%= image_tag @post.display_image, class: "card-img-top" %>
+     <% if @post.display_image %>
+      <%= image_tag @post.display_image, class: "card-img-top" %>
+     <% end %>
      <div class="card-header bg-warning text-light">投稿者</div>
      <div class="card-body"><%= link_to @post.user.username, user_path(@post.user_id) %></div>
      <div class="card-header bg-warning text-light">料理名</div>

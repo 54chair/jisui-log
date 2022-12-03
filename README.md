@@ -1,24 +1,55 @@
-# README
+## 自炊習慣化サービス「自炊ログ」
+![自炊ログ_トップページ](https://user-images.githubusercontent.com/103517622/205426162-9a104266-1240-4257-b5f0-d928f18d98de.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+自炊ログ : https://jisui-log.herokuapp.com/
 
-Things you may want to cover:
+自炊ログは、自炊記録を管理し習慣化するサービスです。  
+自炊記録を可視化したり自炊仲間を作ったりすることで、自炊に対するモチベーションを上げることができます。
 
-* Ruby version
+![自炊ログ_プロフィールページ](https://user-images.githubusercontent.com/103517622/205427837-137b3c45-8a70-4388-9c3c-6fb3837eaf89.png)
 
-* System dependencies
+## ターゲット
+自炊をはじめた一人暮らしの大学生です。
 
-* Configuration
 
-* Database creation
+## 作成背景
+ターゲットである「自炊をはじめた一人暮らしの大学生」が抱える  
+①自身で作った料理を記録として残して簡単に管理したい  
+②一人暮らしだと自炊をしても誰にもほめてもらえず寂しい、自炊のモチベーションが続かない  
+という2つの課題を解決したいと思い、作成に至りました。
 
-* Database initialization
+## 使用技術
+#### フロントエンド
+ - HTML
+ - CSS
+ - JavaScript
+ - JQuery
+ - Bootstrap
+ - Font Awesome
 
-* How to run the test suite
+#### バックエンド
+ - Ruby 2.7.6
+ - Ruby on Rails 6.0.4
+ - MySQL 14.14
 
-* Services (job queues, cache servers, search engines, etc.)
+#### インフラ
+ - Heroku
 
-* Deployment instructions
+#### その他
+ - Git/Github
 
-* ...
+## ER図
+![自炊ログ_ER図](https://user-images.githubusercontent.com/103517622/205428753-bf104f74-2375-470e-9c7a-278c4df5dd98.jpg)
+
+## 機能一覧
+ - 画像付き投稿機能(項目：料理の画像、料理タイトル、コメント)
+ - いいね機能
+ - フォロー機能
+ - 新規登録・ログイン機能(Devise)
+
+## 今後実装したい機能
+ - ページネーション機能
+ - 投稿に対するコメント機能
+ - 投稿検索機能(キーワード検索機能)
+ - カレンダー機能(投稿数に応じてカレンダーの背景の色が変わる)

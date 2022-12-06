@@ -42,7 +42,7 @@ URL : https://jisui-log.herokuapp.com/
 
 ②気になる投稿にいいねをして自炊記録を褒め合う
 
-![自炊ログ_いいね機能](https://user-images.githubusercontent.com/103517622/205839798-0b52a509-21de-4289-9939-d692ea583cb5.gif)
+![自炊ログ_いいね機能](https://user-images.githubusercontent.com/103517622/205845563-9caf2308-5ff2-4bf4-963e-0de8286c18d2.gif)
 
 ## 使用した技術
 #### フロントエンド

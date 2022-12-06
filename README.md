@@ -2,7 +2,7 @@
 自炊ログは、自炊を習慣化するためのWebサービスです。  
 自炊記録を可視化したり自炊仲間を作ったりすることで、自炊に対するモチベーションを上げることができます。
 
-![自炊ログ_ゲストログイン機能](https://user-images.githubusercontent.com/103517622/205727075-78579d78-54d4-4cdb-8bd7-169f682133c2.gif)
+![自炊ログ_ゲストログイン機能](https://user-images.githubusercontent.com/103517622/205840775-f0f50db4-ddaa-4284-a547-1beaf570f824.gif)
 
 URL : https://jisui-log.herokuapp.com/  
 ゲストログインボタンで、メールアドレスとパスワードを入力せずにログインできます。
@@ -23,11 +23,11 @@ URL : https://jisui-log.herokuapp.com/
 ### 自炊記録管理の方法
 ①新規投稿ページから、自炊した料理名・感想・画像を投稿する
 
-![自炊ログ_新規投稿機能](https://user-images.githubusercontent.com/103517622/205733787-bb7cf64b-7a30-4b85-8a75-f7ea6dd22c2c.gif)
+![自炊ログ_新規投稿機能](https://user-images.githubusercontent.com/103517622/205840258-e717e085-e904-43d8-8c10-e74cb394b0be.gif)
 
 ②自身のプロフィールページに行くとこれまで投稿した自炊記録の一覧を確認することが出来る
 
-![自炊ログ_プロフィールページ](https://user-images.githubusercontent.com/103517622/205824821-fe34b627-bf4f-4704-a6c3-7c293238c617.png)
+![自炊ログ_プロフィールページ](https://user-images.githubusercontent.com/103517622/205841517-69697168-5159-4e71-bdec-52ce45516484.png)
 
 ### 自炊のモチベーションを維持する方法
 #### (1)フォロー
@@ -35,15 +35,14 @@ URL : https://jisui-log.herokuapp.com/
 
 ②気になるユーザーをフォローして自炊仲間をつくる
 
-![自炊ログ_フォロー機能](https://user-images.githubusercontent.com/103517622/205732553-c2e33825-2423-4c00-af70-2dce5b5d3f93.gif)
+![自炊ログ_フォロー機能](https://user-images.githubusercontent.com/103517622/205839685-2d50e257-9381-4878-9728-b1450b6df763.gif)
 
 #### (2)いいね
 ①投稿一覧ぺージや気になるユーザーのプロフィールページから気になる投稿の投稿詳細画面にいく
 
 ②気になる投稿にいいねをして自炊記録を褒め合う
 
-![自炊ログ_いいね機能](https://user-images.githubusercontent.com/103517622/205732805-0a776c0a-b4e3-4fc9-a533-0979962e6243.gif)
-
+![自炊ログ_いいね機能](https://user-images.githubusercontent.com/103517622/205839798-0b52a509-21de-4289-9939-d692ea583cb5.gif)
 
 ## 使用した技術
 #### フロントエンド

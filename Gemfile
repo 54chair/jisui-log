@@ -47,6 +47,9 @@ gem 'mini_magick'
 # AWS用のgem
 gem "aws-sdk-s3", require: false
 
+# ページネーション用のgem
+gem 'kaminari'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

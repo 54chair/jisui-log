@@ -8,7 +8,14 @@
         <ul class="list-group">
           <% @likes_users.each do |user| %>
             <li class="list-group-item">
-              <%= link_to user.username, user_path(user) %>
+              <%= link_to user_path(user), {class: "link"} do %>
+                <% if user.avatar.attached? %>
+                  <%= image_tag user.avatar.variant(gravity: :center, resize:"40x40^", crop:"40x40+0+0").processed, {class: "avatar"} %>
+                <% else %>
+                  <%= image_tag("default_user.jpg", size: "40x40", class: "avatar") %>
+                <% end %>
+                <%= user.username %>
+              <% end %>
             </li>
           <% end %>
         </ul>

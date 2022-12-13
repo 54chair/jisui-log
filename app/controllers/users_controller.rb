@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = Kaminari.paginate_array(User.all).page(params[:page]).per(10)
+    @users = Kaminari.paginate_array(User.all).page(params[:page]).per(6)
   end
 
   def show
@@ -10,13 +10,13 @@ class UsersController < ApplicationController
   
   def following
     @user  = User.find(params[:id])
-    @users = @user.following
+    @users = Kaminari.paginate_array(@user.following).page(params[:page]).per(6)
     render 'following'
   end
 
   def followers
     @user  = User.find(params[:id])
-    @users = @user.followers
+    @users = Kaminari.paginate_array(@user.followers).page(params[:page]).per(6)
     render 'followers'
   end
   

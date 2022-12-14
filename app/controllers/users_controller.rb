@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = Post.where(user_id: @user.id)
+    @posts = Kaminari.paginate_array(Post.where(user_id: @user.id)).page(params[:page]).per(6)
   end
   
   def following
@@ -23,6 +23,6 @@ class UsersController < ApplicationController
   def likes
     @user = User.find(params[:id])
     @likes = Like.where(user_id: @user.id).pluck(:post_id)
-    @like_posts = Post.find(@likes)
+    @like_posts = Kaminari.paginate_array(Post.find(@likes)).page(params[:page]).per(12)
   end
 end

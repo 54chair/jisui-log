@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  
+  before_action :authenticate_user!
   def index
     @likes = Like.where(post_id: params[:post_id]).pluck(:user_id)
     @likes_users = User.find(@likes)

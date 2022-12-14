@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   def index
     @users = Kaminari.paginate_array(User.all).page(params[:page]).per(6)
   end

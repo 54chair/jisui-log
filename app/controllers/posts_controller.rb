@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @posts = Kaminari.paginate_array(Post.all).page(params[:page]).per(12)
   end

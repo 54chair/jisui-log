@@ -73,6 +73,7 @@ URL : https://jisui-log.herokuapp.com/
  - image_processing(ファイルの加工処理のため)
  - mini_magick(ファイルの加工処理のため)
  - aws-sdk-s3(画像投稿機能の実装ため)
+ - kaminari(ページネーション機能実装のため)
 
 ## ER図
 ![自炊ログ_ER図](https://user-images.githubusercontent.com/103517622/205428753-bf104f74-2375-470e-9c7a-278c4df5dd98.jpg)
@@ -83,9 +84,9 @@ URL : https://jisui-log.herokuapp.com/
  - フォロー機能
  - 新規登録・ログイン機能(Devise)
  - ゲストログイン機能
+ - ページネーション機能
 
 ## 今後実装したい機能
- - ページネーション機能
  - 投稿に対するコメント機能
  - 投稿検索機能(キーワード検索機能)
  - カレンダー機能(投稿数に応じてカレンダーの背景の色が変わる)

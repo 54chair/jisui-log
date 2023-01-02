@@ -202,6 +202,29 @@ p {
   text-align: center;
 }
 
+.post-show-new-comment {
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.post-show-index-comment {
+  padding: 50px 0px;
+  text-align: center;
+}
+
+/* コメント一覧 */
+.comment-index-user {
+  padding-top: 10px;
+}
+
+.comment-index-content {
+  padding: 5px 0px;
+}
+
+.card-comment {
+  margin: 0px;
+}
+
 /* 新規投稿 */
 .post-new {
   padding-bottom: 50px;

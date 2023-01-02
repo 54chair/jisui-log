@@ -10,7 +10,16 @@
       <%= image_tag @post.display_image, class: "card-img-top" %>
      <% end %>
      <div class="card-header bg-warning text-light">投稿者</div>
-     <div class="card-body"><%= link_to @post.user.username, user_path(@post.user_id) %></div>
+     <div class="card-body">
+      <%= link_to user_path(@post.user), {class: "link"} do %>
+       <% if @post.user.avatar.attached? %>
+         <%= image_tag @post.user.avatar.variant(gravity: :center, resize:"40x40^", crop:"40x40+0+0").processed, {class: "avatar"} %>
+       <% else %>
+         <%= image_tag("default_user.jpg", size: "40x40", class: "avatar") %>
+       <% end %>
+       <%= @post.user.username %>
+      <% end %>
+     </div>
      <div class="card-header bg-warning text-light">料理名</div>
      <div class="card-body"><%= @post.title %></div>
      <div class="card-header bg-warning text-light">投稿内容</div>
@@ -46,4 +55,54 @@
    </div>
   </div>
  <div>
+ 
+ <div class="post-show-new-comment">
+  <h2>投稿に対するコメント</h2>
+ </div>
+ <div class ="comment-new-form">
+  <div class="row d-flex justify-content-center">
+   <div class="col-md-4">
+    <%= form_with model: [@post, @comment], local: true do |f| %>
+     <div class="mb-3">
+      <%= f.text_area :comment, { class: "form-control", placeholder: "コメントする" } %>
+     </div>
+     <div class="mb-4">
+      <%= f.submit "送信", class: "btn btn-warning" %>
+     </div>
+    <% end %>
+   <div>
+  </div>
+ </div>
+ 
+ <div class="post-show-index-comment">
+  <h2>コメント一覧</h2>
+ </div>
+ <div class ="comment-index-comment">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+     <% @comments.each do |comment| %>
+      <%= link_to user_path(comment.user), {class: "link"} do %>
+       <div class="comment-index-user">
+        <% if comment.user.avatar.attached? %>
+          <%= image_tag comment.user.avatar.variant(gravity: :center, resize:"40x40^", crop:"40x40+0+0").processed, {class: "avatar"} %>
+        <% else %>
+          <%= image_tag("default_user.jpg", size: "40x40", class: "avatar") %>
+        <% end %>
+       <% end %>
+        <%= comment.user.username %>
+      </div>
+      <div class="comment-index-content">
+       <div class="card card-comment">
+        <div class="card-body">
+         <%= comment.comment %>
+        </div>
+       </div>
+       <% if comment.user == current_user %>
+        <%= link_to "削除", post_comment_path(@post, comment), method: :delete %>
+       <% end %>
+      </div>
+     <% end %>
+   </div>
+  </div>
+ </div>
 </section>

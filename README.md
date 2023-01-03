@@ -49,7 +49,7 @@ URL : https://jisui-log.herokuapp.com/
 
 ②気になる投稿にコメントをして自炊記録を褒め合う
 
-![自炊ログ_コメント機能](https://user-images.githubusercontent.com/103517622/210377509-15954a53-a5ad-4cd3-a87a-448685800260.gif)
+![自炊ログ_コメント機能](https://user-images.githubusercontent.com/103517622/210384844-884bed52-7792-471d-8c94-652e67ccfc9b.gif)
 
 ## 使用した技術
 #### フロントエンド
@@ -83,7 +83,7 @@ URL : https://jisui-log.herokuapp.com/
  - kaminari(ページネーション機能実装のため)
 
 ## ER図
-![自炊ログ_ER図](https://user-images.githubusercontent.com/103517622/205428753-bf104f74-2375-470e-9c7a-278c4df5dd98.jpg)
+![自炊ログ_er図](https://user-images.githubusercontent.com/103517622/210389762-79f00871-f506-447f-a497-4cfe00b2f2c8.jpg)
 
 ## 機能一覧
  - 画像付き投稿機能(項目：料理の画像、料理タイトル、コメント)

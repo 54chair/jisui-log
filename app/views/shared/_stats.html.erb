@@ -1,9 +1,11 @@
-<% @user ||= current_user %>
-<a href="<%= following_user_path(@user) %>">
-  <%= @user.following.count %>
-  following
-</a>
-<a href="<%= followers_user_path(@user) %>">
-  <%= @user.followers.count %>
-  followers
-</a>
+<div class="card-body"> 
+  <% @user ||= current_user %>
+  <a href="<%= following_user_path(@user) %>">
+    <%= @user.following.count %>
+  </a>
+  フォロー |
+  <a href="<%= followers_user_path(@user) %>">
+    <%= @user.followers.count %>
+  </a>
+  フォロワー
+</div>

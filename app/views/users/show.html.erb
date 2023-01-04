@@ -16,14 +16,16 @@
           <div class="user-name">
             <h4><%= @user.username %></h4>
           </div>
-          <div class="follow-form">
-            <%= render 'follow_form'%>
-          </div>
-          <div class="stats">
-            <%= render 'shared/stats' %>
-          </div>
-          <div class="d-grid gap-2">
-            <%= link_to 'ユーザーがいいねした投稿を見る', likes_user_path(@user), class: "btn btn-sm btn-warning" %>
+          <div class="d-grid gap-2 mx-auto text-center">
+            <div class="stats card">
+              <%= render 'shared/stats' %>
+            </div>
+            <div class="follow-form">
+              <%= render 'follow_form'%>
+            </div>
+            <div class="d-grid">
+              <%= link_to 'ユーザーがいいねした投稿を見る', likes_user_path(@user), class: "btn btn-sm btn-warning" %>
+            </div>
             <% if @user == current_user %>
               <div class="d-grid">
                 <%= link_to 'プロフィールを変更する', edit_user_registration_path, class: "btn btn-sm btn-warning" %>
@@ -37,7 +39,7 @@
       <div class ="row">
         <% @posts.each do |post| %>
           <div class="col-md-6 col-lg-4">
-            <div class="card">
+            <div class="card post">
               <%= link_to post_path(post), {class: "link"} do %>
                 <%= image_tag post.display_image, class: "post-user-index-img" %>
                 <div class="card-body">

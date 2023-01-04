@@ -18,7 +18,9 @@
             <%= f.label :image, "料理の画像", { class: "form-label"} %></br>
             <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png", class: "form-control" %>
           </div>
-          <%= f.submit "投稿", class: "btn btn-warning" %>
+          <div class="mb-4 d-grid gap-2 mx-auto text-center">
+            <%= f.submit "投稿", class: "btn btn-warning" %>
+          </div>
         <% end %>
       </div>
     </div>

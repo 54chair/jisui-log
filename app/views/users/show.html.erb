@@ -22,14 +22,14 @@
           <div class="stats">
             <%= render 'shared/stats' %>
           </div>
-          <div>
-            <%= link_to 'ユーザーがいいねした投稿を見る', likes_user_path(@user) %>
+          <div class="d-grid gap-2">
+            <%= link_to 'ユーザーがいいねした投稿を見る', likes_user_path(@user), class: "btn btn-sm btn-warning" %>
+            <% if @user == current_user %>
+              <div class="d-grid">
+                <%= link_to 'プロフィールを変更する', edit_user_registration_path, class: "btn btn-sm btn-warning" %>
+              </div>
+            <% end %>
           </div>
-          <% if @user == current_user %>
-            <div>
-              <%= link_to 'プロフィールを変更する', edit_user_registration_path %>
-            </div>
-          <% end %>
         </div>
       </div>
     </div>

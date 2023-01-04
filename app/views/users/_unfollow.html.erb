@@ -1,3 +1,5 @@
 <%= form_with(model: current_user.active_relationships.find_by(followed_id: @user.id), html: { method: :delete }, local: true) do |f| %>
-  <%= f.submit "フォローを解除する" %>
+  <div class="d-grid">
+    <%= f.submit "フォローを解除する", class: "btn btn-sm btn-warning" %>
+  </div>
 <% end %>

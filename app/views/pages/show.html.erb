@@ -6,7 +6,7 @@
   <% unless user_signed_in? %>
   <div class="home-button-wrapper">
     <div class="home-button">
-      <%= link_to 'サインアップ', new_user_registration_path, class: "btn btn-warning link", role: "button" %>
+      <%= link_to '新規登録', new_user_registration_path, class: "btn btn-warning link", role: "button" %>
       <%= link_to 'ログイン', new_user_session_path, class: "btn btn-warning link", role: "button" %>
       <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: "btn btn-warning link", role: "button" %>
     </div>

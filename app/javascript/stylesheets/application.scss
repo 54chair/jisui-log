@@ -72,6 +72,11 @@ footer {
 h1 {
   font-size: 45px;
 }
+
+h2 {
+  font-size: 30px;
+}
+
 p {
   font-size: 20px;
 }
@@ -88,6 +93,12 @@ p {
 }
 .home-button a {
   margin-top: 10px;
+}
+
+.home-about-servise-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 30px;
 }
 
 /* サインアップ */
@@ -131,15 +142,19 @@ p {
 
 /* ホーム */
 .home {
-  padding: 200px 0px;
+  padding: 100px 0px;
 }
 
 .home-item {
   text-align: center;
 }
 
+.home-about-servise {
+  margin-top: 100px;
+}
+
 .home-start-servise-button {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 /* プロフィール */

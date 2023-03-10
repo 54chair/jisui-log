@@ -4,7 +4,7 @@
 
 ![自炊ログ_ゲストログイン機能](https://user-images.githubusercontent.com/103517622/205859242-19104ed5-0655-4ab4-aee1-08481bf9f1ce.gif)
 
-URL : https://jisui-log.herokuapp.com/  
+URL : https://www.jisui-log.com/  
 ゲストログインボタンで、メールアドレスとパスワードを入力せずにログインできます。
 
 ## ターゲット

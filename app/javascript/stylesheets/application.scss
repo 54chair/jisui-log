@@ -81,6 +81,38 @@ p {
   font-size: 20px;
 }
 
+
+/* サインアップに失敗した時のflash */
+#error_explanation {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+#error_explanation h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+#error_explanation ul {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+#error_explanation li {
+  padding-left: 1rem;
+}
+
+#error_explanation li:before {
+  content: "• ";
+  color: #721c24;
+  font-weight: bold;
+}
+
 /* トップページ */
 .home-button-wrapper {
   max-width: 400px;
